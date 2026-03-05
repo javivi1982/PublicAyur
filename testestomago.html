@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Cuestionario digestivo del Amashaya</title>
+
+<style>
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+background:#f6f8fb;
+margin:0;
+padding:0;
+line-height:1.6;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:30px;
+}
+
+h1{
+text-align:center;
+color:#2c3e50;
+}
+
+.intro{
+background:white;
+padding:20px;
+border-radius:8px;
+margin-bottom:30px;
+}
+
+.section{
+background:white;
+padding:20px;
+margin-bottom:25px;
+border-radius:8px;
+box-shadow:0 3px 8px rgba(0,0,0,0.05);
+}
+
+.section h2{
+color:#34495e;
+}
+
+.question{
+padding:10px 0;
+border-bottom:1px solid #eee;
+}
+
+.question:last-child{
+border-bottom:none;
+}
+
+.scale{
+font-size:14px;
+color:#555;
+margin-bottom:10px;
+}
+
+button{
+display:block;
+margin:30px auto;
+padding:14px 25px;
+font-size:16px;
+background:#2c7be5;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1a5fd0;
+}
+
+.results{
+margin-top:40px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:8px;
+margin-bottom:20px;
+box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.bar{
+height:16px;
+background:#e0e6ed;
+border-radius:10px;
+overflow:hidden;
+margin:10px 0 15px 0;
+}
+
+.bar-fill{
+height:100%;
+background:#4CAF50;
+width:0%;
+}
+
+.footer{
+margin-top:40px;
+font-size:14px;
+color:#555;
+background:white;
+padding:20px;
+border-radius:8px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Cuestionario digestivo del Amāśaya</h1>
+
+<div class="intro">
+
+<p>
+Este cuestionario permite explorar algunos síntomas digestivos relacionados con los principios Vata, Kapha y Pitta en el estómago (Amāśaya).
+</p>
+
+<p class="scale">
+Indique el grado en que se manifiesta cada síntoma:
+<strong>0 = nada, 1 = poco, 2 = bastante, 3 = mucho</strong>
+</p>
+
+</div>
+
+<form id="form">
+
+<div class="section">
+<h2>Vata (digestión irregular)</h2>
+
+<div class="question">Gases o distensión abdominal
+<input type="radio" name="vata1" value="0" checked>0
+<input type="radio" name="vata1" value="1">1
+<input type="radio" name="vata1" value="2">2
+<input type="radio" name="vata1" value="3">3
+</div>
+
+<div class="question">Digestión irregular
+<input type="radio" name="vata2" value="0" checked>0
+<input type="radio" name="vata2" value="1">1
+<input type="radio" name="vata2" value="2">2
+<input type="radio" name="vata2" value="3">3
+</div>
+
+<div class="question">Eructos frecuentes
+<input type="radio" name="vata3" value="0" checked>0
+<input type="radio" name="vata3" value="1">1
+<input type="radio" name="vata3" value="2">2
+<input type="radio" name="vata3" value="3">3
+</div>
+
+<div class="question">Sensación de vacío o nerviosismo en el estómago
+<input type="radio" name="vata4" value="0" checked>0
+<input type="radio" name="vata4" value="1">1
+<input type="radio" name="vata4" value="2">2
+<input type="radio" name="vata4" value="3">3
+</div>
+
+<div class="question">Estreñimiento asociado a digestión irregular
+<input type="radio" name="vata5" value="0" checked>0
+<input type="radio" name="vata5" value="1">1
+<input type="radio" name="vata5" value="2">2
+<input type="radio" name="vata5" value="3">3
+</div>
+
+</div>
+
+<div class="section">
+<h2>Kapha (digestión lenta)</h2>
+
+<div class="question">Pesadez después de comer
+<input type="radio" name="kapha1" value="0" checked>0
+<input type="radio" name="kapha1" value="1">1
+<input type="radio" name="kapha1" value="2">2
+<input type="radio" name="kapha1" value="3">3
+</div>
+
+<div class="question">Digestión lenta
+<input type="radio" name="kapha2" value="0" checked>0
+<input type="radio" name="kapha2" value="1">1
+<input type="radio" name="kapha2" value="2">2
+<input type="radio" name="kapha2" value="3">3
+</div>
+
+<div class="question">Exceso de mucosidad digestiva
+<input type="radio" name="kapha3" value="0" checked>0
+<input type="radio" name="kapha3" value="1">1
+<input type="radio" name="kapha3" value="2">2
+<input type="radio" name="kapha3" value="3">3
+</div>
+
+<div class="question">Somnolencia después de comer
+<input type="radio" name="kapha4" value="0" checked>0
+<input type="radio" name="kapha4" value="1">1
+<input type="radio" name="kapha4" value="2">2
+<input type="radio" name="kapha4" value="3">3
+</div>
+
+<div class="question">Sensación de plenitud prolongada
+<input type="radio" name="kapha5" value="0" checked>0
+<input type="radio" name="kapha5" value="1">1
+<input type="radio" name="kapha5" value="2">2
+<input type="radio" name="kapha5" value="3">3
+</div>
+
+</div>
+
+<div class="section">
+<h2>Pitta (exceso de calor digestivo)</h2>
+
+<div class="question">Acidez o ardor estomacal
+<input type="radio" name="pitta1" value="0" checked>0
+<input type="radio" name="pitta1" value="1">1
+<input type="radio" name="pitta1" value="2">2
+<input type="radio" name="pitta1" value="3">3
+</div>
+
+<div class="question">Sensación de calor en el estómago
+<input type="radio" name="pitta2" value="0" checked>0
+<input type="radio" name="pitta2" value="1">1
+<input type="radio" name="pitta2" value="2">2
+<input type="radio" name="pitta2" value="3">3
+</div>
+
+<div class="question">Hambre muy intensa o frecuente
+<input type="radio" name="pitta3" value="0" checked>0
+<input type="radio" name="pitta3" value="1">1
+<input type="radio" name="pitta3" value="2">2
+<input type="radio" name="pitta3" value="3">3
+</div>
+
+<div class="question">Irritación digestiva tras comidas picantes o ácidas
+<input type="radio" name="pitta4" value="0" checked>0
+<input type="radio" name="pitta4" value="1">1
+<input type="radio" name="pitta4" value="2">2
+<input type="radio" name="pitta4" value="3">3
+</div>
+
+<div class="question">Sensación de ardor después de comer
+<input type="radio" name="pitta5" value="0" checked>0
+<input type="radio" name="pitta5" value="1">1
+<input type="radio" name="pitta5" value="2">2
+<input type="radio" name="pitta5" value="3">3
+</div>
+
+</div>
+
+<button type="button" onclick="calcular()">Ver recomendaciones</button>
+
+</form>
+
+<div id="results" class="results"></div>
+
+<div class="footer">
+Las recomendaciones de esta página tienen carácter orientativo y no pretenden sustituir ningún tratamiento médico ni el consejo de profesionales de la salud.
+</div>
+
+</div>
+
+<script>
+
+function joinWords(list){
+
+if(list.length==1) return list[0]
+
+if(list.length==2) return list[0]+" y "+list[1]
+
+return list.slice(0,-1).join(", ")+" y "+list.slice(-1)
+
+}
+
+function calcular(){
+
+const sintomasVata=["gases","digestión irregular","eructos","sensación de vacío en el estómago","estreñimiento"]
+const sintomasKapha=["pesadez digestiva","digestión lenta","mucosidad digestiva","somnolencia después de comer","plenitud prolongada"]
+const sintomasPitta=["acidez","ardor estomacal","hambre intensa","irritación digestiva","calor en el estómago"]
+
+let vata=0,kapha=0,pitta=0
+let vataS=[],kaphaS=[],pittaS=[]
+
+for(let i=1;i<=5;i++){
+let v=parseInt(document.querySelector(`input[name=vata${i}]:checked`).value)
+vata+=v
+if(v>=1) vataS.push(sintomasVata[i-1])
+}
+
+for(let i=1;i<=5;i++){
+let v=parseInt(document.querySelector(`input[name=kapha${i}]:checked`).value)
+kapha+=v
+if(v>=1) kaphaS.push(sintomasKapha[i-1])
+}
+
+for(let i=1;i<=5;i++){
+let v=parseInt(document.querySelector(`input[name=pitta${i}]:checked`).value)
+pitta+=v
+if(v>=1) pittaS.push(sintomasPitta[i-1])
+}
+
+function barra(valor){
+return (valor/15)*100
+}
+
+function bloque(nombre,puntos,sintomas,reco){
+
+if(puntos==0) return ""
+
+let textoSintomas=joinWords(sintomas)
+
+return `
+<div class="card">
+
+<h3>${nombre} — nivel ${puntos}</h3>
+
+<div class="bar">
+<div class="bar-fill" style="width:${barra(puntos)}%"></div>
+</div>
+
+<p>
+Cuando aparezcan ${textoSintomas}, puede ser beneficioso considerar las siguientes recomendaciones:
+</p>
+
+<p>${reco}</p>
+
+</div>
+`
+}
+
+let html=""
+
+html+=bloque("Vata",vata,vataS,
+"Favorecer comidas calientes y regulares, sopas, arroz cocido, jengibre suave y comino. Evitar comer con prisa, alimentos muy fríos o secos y horarios irregulares."
+)
+
+html+=bloque("Kapha",kapha,kaphaS,
+"Preferir comidas ligeras y calientes, utilizar especias digestivas como jengibre, pimienta o cúrcuma, y realizar paseos después de comer. Evitar comidas pesadas, muy grasas o excesivamente dulces."
+)
+
+html+=bloque("Pitta",pitta,pittaS,
+"Favorecer alimentos refrescantes como arroz, verduras suaves y frutas dulces. Pueden ser útiles infusiones de hinojo o manzanilla. Evitar picantes intensos, fritos, alcohol y exceso de café."
+)
+
+document.getElementById("results").innerHTML=html
+
+}
+
+</script>
+
+</body>
+</html>
