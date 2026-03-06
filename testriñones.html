@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Cuestionario de bienestar renal</title>
+
+<style>
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+background:#f6f8fb;
+margin:0;
+padding:0;
+line-height:1.6;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:30px;
+}
+
+h1{
+text-align:center;
+color:#2c3e50;
+}
+
+.intro{
+background:white;
+padding:20px;
+border-radius:8px;
+margin-bottom:30px;
+}
+
+.section{
+background:white;
+padding:20px;
+margin-bottom:25px;
+border-radius:8px;
+box-shadow:0 3px 8px rgba(0,0,0,0.05);
+}
+
+.section h2{
+color:#34495e;
+}
+
+.question{
+padding:10px 0;
+border-bottom:1px solid #eee;
+}
+
+.question:last-child{
+border-bottom:none;
+}
+
+.scale{
+font-size:14px;
+color:#555;
+margin-bottom:10px;
+}
+
+button{
+display:block;
+margin:30px auto;
+padding:14px 25px;
+font-size:16px;
+background:#2c7be5;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1a5fd0;
+}
+
+.results{
+margin-top:40px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:8px;
+margin-bottom:20px;
+box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.bar{
+height:16px;
+background:#e0e6ed;
+border-radius:10px;
+overflow:hidden;
+margin:10px 0 15px 0;
+}
+
+.bar-fill{
+height:100%;
+background:#4CAF50;
+width:0%;
+}
+
+.footer{
+margin-top:40px;
+font-size:14px;
+color:#555;
+background:white;
+padding:20px;
+border-radius:8px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Cuestionario de bienestar de los riñones</h1>
+
+<div class="intro">
+
+<p>
+Este cuestionario permite explorar algunos síntomas que pueden relacionarse con el funcionamiento renal y el equilibrio de líquidos en el organismo.
+</p>
+
+<p class="scale">
+Indique el grado en que se manifiesta cada síntoma:
+<strong>0 = nada, 1 = poco, 2 = bastante, 3 = mucho</strong>
+</p>
+
+</div>
+
+<form id="form">
+
+<div class="section">
+<h2>Hidratación</h2>
+
+<div class="question">Sed frecuente
+<input type="radio" name="hidra1" value="0" checked>0
+<input type="radio" name="hidra1" value="1">1
+<input type="radio" name="hidra1" value="2">2
+<input type="radio" name="hidra1" value="3">3
+</div>
+
+<div class="question">Orina muy concentrada
+<input type="radio" name="hidra2" value="0" checked>0
+<input type="radio" name="hidra2" value="1">1
+<input type="radio" name="hidra2" value="2">2
+<input type="radio" name="hidra2" value="3">3
+</div>
+
+<div class="question">Boca seca
+<input type="radio" name="hidra3" value="0" checked>0
+<input type="radio" name="hidra3" value="1">1
+<input type="radio" name="hidra3" value="2">2
+<input type="radio" name="hidra3" value="3">3
+</div>
+
+<div class="question">Cansancio asociado a poca hidratación
+<input type="radio" name="hidra4" value="0" checked>0
+<input type="radio" name="hidra4" value="1">1
+<input type="radio" name="hidra4" value="2">2
+<input type="radio" name="hidra4" value="3">3
+</div>
+
+<div class="question">Dolor leve en zona lumbar
+<input type="radio" name="hidra5" value="0" checked>0
+<input type="radio" name="hidra5" value="1">1
+<input type="radio" name="hidra5" value="2">2
+<input type="radio" name="hidra5" value="3">3
+</div>
+
+</div>
+
+<div class="section">
+<h2>Retención de líquidos</h2>
+
+<div class="question">Hinchazón en tobillos
+<input type="radio" name="reten1" value="0" checked>0
+<input type="radio" name="reten1" value="1">1
+<input type="radio" name="reten1" value="2">2
+<input type="radio" name="reten1" value="3">3
+</div>
+
+<div class="question">Sensación de pesadez corporal
+<input type="radio" name="reten2" value="0" checked>0
+<input type="radio" name="reten2" value="1">1
+<input type="radio" name="reten2" value="2">2
+<input type="radio" name="reten2" value="3">3
+</div>
+
+<div class="question">Hinchazón facial matutina
+<input type="radio" name="reten3" value="0" checked>0
+<input type="radio" name="reten3" value="1">1
+<input type="radio" name="reten3" value="2">2
+<input type="radio" name="reten3" value="3">3
+</div>
+
+<div class="question">Aumento de peso por líquidos
+<input type="radio" name="reten4" value="0" checked>0
+<input type="radio" name="reten4" value="1">1
+<input type="radio" name="reten4" value="2">2
+<input type="radio" name="reten4" value="3">3
+</div>
+
+<div class="question">Sensación de inflamación general
+<input type="radio" name="reten5" value="0" checked>0
+<input type="radio" name="reten5" value="1">1
+<input type="radio" name="reten5" value="2">2
+<input type="radio" name="reten5" value="3">3
+</div>
+
+</div>
+
+<div class="section">
+<h2>Filtración renal</h2>
+
+<div class="question">Necesidad frecuente de orinar
+<input type="radio" name="filtro1" value="0" checked>0
+<input type="radio" name="filtro1" value="1">1
+<input type="radio" name="filtro1" value="2">2
+<input type="radio" name="filtro1" value="3">3
+</div>
+
+<div class="question">Orinar durante la noche
+<input type="radio" name="filtro2" value="0" checked>0
+<input type="radio" name="filtro2" value="1">1
+<input type="radio" name="filtro2" value="2">2
+<input type="radio" name="filtro2" value="3">3
+</div>
+
+<div class="question">Cambios en el color de la orina
+<input type="radio" name="filtro3" value="0" checked>0
+<input type="radio" name="filtro3" value="1">1
+<input type="radio" name="filtro3" value="2">2
+<input type="radio" name="filtro3" value="3">3
+</div>
+
+<div class="question">Molestia al orinar
+<input type="radio" name="filtro4" value="0" checked>0
+<input type="radio" name="filtro4" value="1">1
+<input type="radio" name="filtro4" value="2">2
+<input type="radio" name="filtro4" value="3">3
+</div>
+
+<div class="question">Fatiga persistente
+<input type="radio" name="filtro5" value="0" checked>0
+<input type="radio" name="filtro5" value="1">1
+<input type="radio" name="filtro5" value="2">2
+<input type="radio" name="filtro5" value="3">3
+</div>
+
+</div>
+
+<button type="button" onclick="calcular()">Ver recomendaciones</button>
+
+</form>
+
+<div id="results" class="results"></div>
+
+<div class="footer">
+Las recomendaciones de esta página tienen carácter orientativo y no pretenden sustituir ningún tratamiento médico ni el consejo de profesionales de la salud.
+</div>
+
+</div>
+
+<script>
+
+function joinWords(list){
+if(list.length==1) return list[0]
+if(list.length==2) return list[0]+" y "+list[1]
+return list.slice(0,-1).join(", ")+" y "+list.slice(-1)
+}
+
+function calcular(){
+
+const sintomasH=["sed frecuente","orina concentrada","boca seca","cansancio por hidratación","dolor lumbar"]
+const sintomasR=["hinchazón en tobillos","pesadez corporal","hinchazón facial","aumento de peso por líquidos","inflamación"]
+const sintomasF=["micción frecuente","orinar por la noche","cambios en color de orina","molestia al orinar","fatiga"]
+
+let h=0,r=0,f=0
+let hS=[],rS=[],fS=[]
+
+for(let i=1;i<=5;i++){
+let v=parseInt(document.querySelector(`input[name=hidra${i}]:checked`).value)
+h+=v
+if(v>=1) hS.push(sintomasH[i-1])
+}
+
+for(let i=1;i<=5;i++){
+let v=parseInt(document.querySelector(`input[name=reten${i}]:checked`).value)
+r+=v
+if(v>=1) rS.push(sintomasR[i-1])
+}
+
+for(let i=1;i<=5;i++){
+let v=parseInt(document.querySelector(`input[name=filtro${i}]:checked`).value)
+f+=v
+if(v>=1) fS.push(sintomasF[i-1])
+}
+
+function barra(valor){
+return (valor/15)*100
+}
+
+function bloque(nombre,puntos,sintomas,reco){
+
+if(puntos==0) return ""
+
+let textoSintomas=joinWords(sintomas)
+
+return `
+<div class="card">
+
+<h3>${nombre} — nivel ${puntos}</h3>
+
+<div class="bar">
+<div class="bar-fill" style="width:${barra(puntos)}%"></div>
+</div>
+
+<p>
+Cuando aparezcan ${textoSintomas}, puede ser útil considerar las siguientes recomendaciones:
+</p>
+
+<p>${reco}</p>
+
+</div>
+`
+}
+
+let html=""
+
+html+=bloque("Hidratación",h,hS,
+"Asegurar una hidratación regular a lo largo del día. Priorizar agua, infusiones suaves y alimentos ricos en agua como frutas y verduras. Evitar exceso de café, bebidas azucaradas o alcohol."
+)
+
+html+=bloque("Retención de líquidos",r,rS,
+"Reducir el exceso de sal en la dieta, realizar actividad física ligera como caminar y favorecer alimentos frescos. Algunas infusiones suaves como diente de león o cola de caballo pueden favorecer la eliminación de líquidos."
+)
+
+html+=bloque("Filtración renal",f,fS,
+"Priorizar una dieta equilibrada, beber suficiente agua y evitar exceso de proteínas, alcohol o alimentos ultraprocesados. Mantener revisiones médicas si los síntomas persisten."
+)
+
+document.getElementById("results").innerHTML=html
+
+}
+
+</script>
+
+</body>
+</html>
