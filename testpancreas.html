@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Cuestionario del páncreas</title>
+<title>Cuestionario del páncreas con recomendaciones ayurvédicas</title>
 
 <style>
 
@@ -122,12 +122,11 @@ border-radius:8px;
 <div class="intro">
 
 <p>
-Este cuestionario permite explorar algunos síntomas asociados al funcionamiento del páncreas desde una perspectiva digestiva y metabólica.
+Este cuestionario explora el equilibrio digestivo y metabólico del páncreas desde la perspectiva ayurvédica.
 </p>
 
 <p class="scale">
-Indique el grado en que se manifiesta cada síntoma:
-<strong>0 = nada, 1 = poco, 2 = bastante, 3 = mucho</strong>
+0 = nada, 1 = poco, 2 = bastante, 3 = mucho
 </p>
 
 </div>
@@ -151,7 +150,7 @@ Indique el grado en que se manifiesta cada síntoma:
 <input type="radio" name="vata2" value="3">3
 </div>
 
-<div class="question">Sensación de debilidad tras comer
+<div class="question">Debilidad tras comer
 <input type="radio" name="vata3" value="0" checked>0
 <input type="radio" name="vata3" value="1">1
 <input type="radio" name="vata3" value="2">2
@@ -184,14 +183,14 @@ Indique el grado en que se manifiesta cada síntoma:
 <input type="radio" name="kapha1" value="3">3
 </div>
 
-<div class="question">Sensación de pesadez tras comer
+<div class="question">Pesadez tras comer
 <input type="radio" name="kapha2" value="0" checked>0
 <input type="radio" name="kapha2" value="1">1
 <input type="radio" name="kapha2" value="2">2
 <input type="radio" name="kapha2" value="3">3
 </div>
 
-<div class="question">Somnolencia después de las comidas
+<div class="question">Somnolencia tras comer
 <input type="radio" name="kapha3" value="0" checked>0
 <input type="radio" name="kapha3" value="1">1
 <input type="radio" name="kapha3" value="2">2
@@ -205,7 +204,7 @@ Indique el grado en que se manifiesta cada síntoma:
 <input type="radio" name="kapha4" value="3">3
 </div>
 
-<div class="question">Sensación de metabolismo lento
+<div class="question">Metabolismo lento
 <input type="radio" name="kapha5" value="0" checked>0
 <input type="radio" name="kapha5" value="1">1
 <input type="radio" name="kapha5" value="2">2
@@ -217,14 +216,14 @@ Indique el grado en que se manifiesta cada síntoma:
 <div class="section">
 <h2>Pitta</h2>
 
-<div class="question">Sensación de ardor digestivo
+<div class="question">Ardor digestivo
 <input type="radio" name="pitta1" value="0" checked>0
 <input type="radio" name="pitta1" value="1">1
 <input type="radio" name="pitta1" value="2">2
 <input type="radio" name="pitta1" value="3">3
 </div>
 
-<div class="question">Hambre intensa o frecuente
+<div class="question">Hambre intensa
 <input type="radio" name="pitta2" value="0" checked>0
 <input type="radio" name="pitta2" value="1">1
 <input type="radio" name="pitta2" value="2">2
@@ -245,7 +244,7 @@ Indique el grado en que se manifiesta cada síntoma:
 <input type="radio" name="pitta4" value="3">3
 </div>
 
-<div class="question">Sensación de calor interno tras comer
+<div class="question">Calor interno tras comer
 <input type="radio" name="pitta5" value="0" checked>0
 <input type="radio" name="pitta5" value="1">1
 <input type="radio" name="pitta5" value="2">2
@@ -261,7 +260,7 @@ Indique el grado en que se manifiesta cada síntoma:
 <div id="results" class="results"></div>
 
 <div class="footer">
-Las recomendaciones de esta página tienen carácter orientativo y no sustituyen el consejo médico profesional.
+Este contenido es orientativo y no sustituye el consejo médico profesional.
 </div>
 
 </div>
@@ -276,9 +275,9 @@ return list.slice(0,-1).join(", ")+" y "+list.slice(-1)
 
 function calcular(){
 
-const sintomasVata=["apetito irregular","digestión irregular","debilidad tras comer","gases","sensibilidad digestiva"]
-const sintomasKapha=["digestión lenta de grasas","pesadez","somnolencia","aumento de peso","metabolismo lento"]
-const sintomasPitta=["ardor digestivo","hambre intensa","irritabilidad","digestión rápida","calor interno"]
+const sintomasVata=["apetito irregular","digestión irregular","debilidad","gases","sensibilidad digestiva"]
+const sintomasKapha=["digestión lenta","pesadez","somnolencia","aumento de peso","metabolismo lento"]
+const sintomasPitta=["ardor","hambre intensa","irritabilidad","digestión rápida","calor interno"]
 
 let vata=0,kapha=0,pitta=0
 let vataS=[],kaphaS=[],pittaS=[]
@@ -313,19 +312,15 @@ let textoSintomas=joinWords(sintomas)
 
 return `
 <div class="card">
-
 <h3>${nombre} — nivel ${puntos}</h3>
 
 <div class="bar">
 <div class="bar-fill" style="width:${barra(puntos)}%"></div>
 </div>
 
-<p>
-Cuando aparezcan ${textoSintomas}, puede ser útil considerar:
-</p>
+<p>Cuando aparezcan ${textoSintomas}, puede ser útil:</p>
 
 <p>${reco}</p>
-
 </div>
 `
 
@@ -334,15 +329,15 @@ Cuando aparezcan ${textoSintomas}, puede ser útil considerar:
 let html=""
 
 html+=bloque("Vata",vata,vataS,
-"Regular horarios de comida, optar por alimentos calientes y fáciles de digerir, evitar ayunos prolongados y reducir alimentos fríos o crudos."
+"Favorecer alimentos calientes y nutritivos como arroz, avena y sopas. Añadir ghee o aceite de sésamo. Plantas recomendadas: jengibre suave, ashwagandha y hinojo. Evitar alimentos fríos, crudos o secos. Mantener horarios regulares de comida, evitar saltarse comidas y priorizar rutinas estables. Comer en un ambiente tranquilo, masticar bien y evitar el estrés durante las comidas. Dormir lo suficiente y mantener una rutina diaria regular. Practicar actividades calmantes como yoga suave, respiración o meditación."
 )
 
 html+=bloque("Kapha",kapha,kaphaS,
-"Reducir grasas pesadas y azúcares, favorecer comidas ligeras, incorporar especias digestivas y mantener actividad física regular."
+"Optar por alimentos ligeros como verduras al vapor, legumbres y especias digestivas. Reducir azúcares y grasas. Plantas útiles: jengibre, cúrcuma, pimienta negra y trikatu. Favorecer infusiones calientes. Evitar comer en exceso y reducir el picoteo entre horas. Priorizar comidas ligeras por la noche. Mantener actividad física regular, preferiblemente diaria y con cierta intensidad. Evitar el sedentarismo y las siestas largas tras las comidas. Favorecer rutinas activas y estimulantes."
 )
 
 html+=bloque("Pitta",pitta,pittaS,
-"Evitar alimentos muy picantes o ácidos, priorizar comidas frescas y equilibradas, y mantener horarios regulares sin excesos."
+"Elegir alimentos refrescantes como arroz, pepino, calabacín y frutas dulces. Evitar picantes y fritos. Plantas recomendadas: aloe vera, cilantro, menta y amla. Tomar infusiones suaves como manzanilla. Evitar comer con prisas o bajo estrés. Mantener horarios regulares sin saltarse comidas para evitar irritabilidad. Evitar exposición excesiva al calor y priorizar ambientes frescos. Practicar actividades relajantes sin competitividad, como paseos, yoga suave o meditación. Dormir en horarios regulares y evitar sobrecarga mental."
 )
 
 document.getElementById("results").innerHTML=html
